@@ -1,0 +1,34 @@
+
+
+
+
+
+{% extends 'dowhat/member_base.html' %}
+
+
+
+        {% block title %}
+        <h1>詳細</h1>
+
+
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+        <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">{{member.member_name}}</h4>
+        {{member.mail_adress}}
+      </div>
+
+<nav class="nav">
+    <a class="nav-link active" href="{% url 'member_delete' member.id  %}">削除</a>
+    <a class="nav-link" href="{% url 'member_edit' member.id %}">更新</a>
+
+  </nav>
+
+{% endblock %}
+

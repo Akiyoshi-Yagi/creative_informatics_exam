@@ -1,0 +1,35 @@
+
+
+{% extends 'dowhat/member_base.html' %}
+
+
+<div class="'container">
+        {% block title %}
+
+        <h1>更新画面</h1>
+
+
+
+          {% endblock %}
+
+
+
+
+        {% block content %}
+
+        <div class="alert alert-success" role="alert">
+
+        <form action="{%url 'member_edit' member.id %}" method="POST" >
+            {% csrf_token %}
+            {{ form.as_p }}
+
+
+            <h6>更新しますか？</h6>
+            <input type="submit" class = 'btn btn-deafault' value="更新"/>
+        </form>
+        </div>
+
+
+        {% endblock %}
+
+</div>

@@ -1,0 +1,40 @@
+{% extends 'dotask/task_base.html' %}
+
+
+
+        {% block title %}
+        <h1>詳細</h1>
+
+
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">{{task.task_name}}</h4>
+                <p>{{task.task_explanation}}</p>
+                <p>{{task.date_limited}}</p>
+
+                {% if task.task_status == True %}
+                <p>完了！！！！</p>
+                {% endif %}
+                {% if task.task_status == False %}
+                <p>まだ終わってません</p>
+                {% endif %}
+
+            </div>
+
+<nav class="nav">
+    <a class="nav-link active" href="{% url 'task_delete' task.id  %}">削除</a>
+    <a class="nav-link" href="{% url 'task_edit' task.id %}">更新</a>
+
+  </nav>
+
+{% endblock %}

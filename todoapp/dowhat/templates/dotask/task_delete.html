@@ -1,0 +1,39 @@
+{% extends 'dotask/task_base.html' %}
+
+
+<div class="'container">
+        {% block title %}
+
+        <h1>削除画面</h1>
+
+
+
+          {% endblock %}
+
+
+
+
+        {% block content %}
+
+        <div class="alert alert-success" role="alert">
+
+        <form action="{%url 'task_delete' task.id %}" method="POST" >
+            {% csrf_token %}
+
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">{{task.task_name}}</h4>
+                {{task.task_explanation}}
+                {{task.date_limited}}
+            </div>
+
+
+
+            <h6>削除しますか？</h6>
+            <input type="submit" class = 'btn btn-deafault' value="削除"/>
+        </form>
+
+        </div>
+
+        {% endblock %}
+
+</div>

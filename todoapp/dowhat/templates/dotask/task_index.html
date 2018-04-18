@@ -1,0 +1,27 @@
+{% extends 'dotask/task_base.html' %}
+
+
+
+{% block title %}
+
+<h1>タスクの一覧</h1>
+
+
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+        {% for task in all_tasks %}
+
+        <div class="alert alert-success" role="alert">
+        <a href="{%url 'task_detail' task.id %}" >{{task.task_name}}</a>
+        </div>
+
+        {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'dowhat/member_base.html' %}
+
+
+
+{% block title %}
+
+<h1>メンバーの一覧</h1>
+
+
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+        {% for member in all_members %}
+
+        <div class="alert alert-success" role="alert">
+        <a href="{%url 'member_detail' member.id %}" >{{member.member_name}}</a>
+        </div>
+
+        {% endfor %}
+
+{% endblock %}
