@@ -85,7 +85,7 @@ print(number_arr)
 #number_arr = number_arr[:,1:]
 
 
-with open("out1.txt", "wt") as f:
+with open("out3.txt", "wt") as f:
     for i in range(len(number_arr)):
         f.write("".join(list(number_arr[i])))
 
