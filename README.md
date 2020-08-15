@@ -1,4 +1,1 @@
-# atcoder
-atcoder精進！圧倒的成長！
-
-atcoderの問題を解いたものです。（https://qiita.com/e869120/items/eb50fdaece12be418faa)
+東京大学情報理工研究科創造情報学専攻の入試問題
